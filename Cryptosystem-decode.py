@@ -1,10 +1,15 @@
+# RSA decode
+#  RSA encryption is:
+#c = m^e mod n
+#Decryption reverses it:
+#m = c^d mod n
 
 #pip install pycryptodome
 import math
 from Crypto.Util.number import * 
 
 # n = (a+b)(a-b)
-# Fermat factorial if p and q are too close 
+# Fermat factorial is used to get p and q, when p and q are too close. 
 def fermat_factor(n):
     a = math.isqrt(n)
     if a * a < n:
